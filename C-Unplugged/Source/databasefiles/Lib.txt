@@ -1,0 +1,41 @@
+S.no     Song Name                                                      Artist Name                                                  Duration                       
+
+1        Excuses                                                       AP Dhillon                                                   5
+
+2         Brown Munde                                                   AP Dhillon                                                   5
+
+3         295                                                           Sidhu Moose Wala                                             5
+
+4         One Love                                                      Shubh                                                        5
+
+5         Balenci                                                       Shubh                                                        5
+
+6         Tension                                                       Diljit Dosanjh                                               5
+
+7         Khairiyat                                                     Arijit Singh                                                 5
+
+8         Kesariya                                                      Arijit Singh                                                 5
+
+9         Tera Ban Jaunga                                               Akhil Sachdeva                                               5
+
+10        Phir Bhi Tumko Chaahunga                                      Arijit Singh                                                 5
+
+11        Dil Diya Gallan                                               Atif Aslam                                                   5
+
+12        O Maahi                                                       Arijit Singh                                                 5
+
+13        Shape of You                                                  Es Sheeran                                                   5
+
+14        Perfect                                                       Ed Sheeran                                                   5
+
+15        Blinding Lights                                               The Weeknd                                                   5
+
+16        Let Me Love You                                               Justin Bieber                                                5
+
+17        Someone Like You                                              Adele                                                        5
+
+18        Born to Shine                                                 Diljit Dosanjh                                               5
+
+19        Same Beef                                                     Sidhu Moose Wala                                             5
+
+20        Winning Speech                                                Karan Aujla                                                  5
