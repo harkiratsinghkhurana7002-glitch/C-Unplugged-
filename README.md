@@ -1,0 +1,56 @@
+                                            USER GUIDE
+                                (Please Read the Guide Before Use)
+Main Features:
+1. Song Library Management (Read-Only)
+•	Loads songs from a binary file: Lib.dat
+•	Displays all songs in a formatted text file: Lib.txt
+•	Each song has a unique song ID generated internally (not shown to user).
+
+
+2. Album Creation and Management
+•	Create new albums using a name
+•	Add songs to albums using song index from Library
+•	Delete songs from albums using song index inside the album
+•	Delete entire albums
+•	All albums (with their songs) are saved to alb.dat for persistent storage across sessions
+
+
+3. Playlist(/ Queue) Creation and Playback
+•	Add songs to playlist
+•	Add entire albums to playlist
+•	Delete songs from playlist
+•	Playlist supports:
+o	Next song
+o	Previous song
+o	Current song
+o	Looping playback
+
+
+4. Command Logging (Across Sessions)
+•	Every user action is logged permanently 
+
+
+5. CLI Menu
+•	A full, numbered menu lets users perform all operations with simple inputs.
+
+
+
+IMPORTANT CAUTION — About Library Creation Function
+ The Library Creator Function (createLib.c) is ONE-TIME USE ONLY
+You wrote a function to generate Lib.dat and Lib.txt initially.
+This was required only to demonstrate implementation.
+❗ Users MUST NOT use this function again.
+Running it again will:
+•	Overwrite Lib.dat
+•	Break song IDs
+•	Corrupt the library linked list
+•	Corrupt albums and playlists
+•	Make your entire program inconsistent
+ If the user wants to modify the library later:
+They must manually update:
+1.	Lib.txt (human-readable listing)
+2.	Lib.dat (binary file from which the program loads songs)
+The library is NOT supposed to be edited through the app.
+How to Run the Program
+Open terminal inside your project’s root folder and compile:
+gcc Source/main.c Source/lib_fxn.c Source/alb_fxn.c Source/playlist_fxn.c -o cUnplugged
