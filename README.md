@@ -1,56 +1,76 @@
-                                            USER GUIDE
-                                (Please Read the Guide Before Use)
-Main Features:
-1. Song Library Management (Read-Only)
-•	Loads songs from a binary file: Lib.dat
-•	Displays all songs in a formatted text file: Lib.txt
-•	Each song has a unique song ID generated internally (not shown to user).
+# USER GUIDE
+### Please Read the Guide Before Use
 
+## Main Features
 
-2. Album Creation and Management
-•	Create new albums using a name
-•	Add songs to albums using song index from Library
-•	Delete songs from albums using song index inside the album
-•	Delete entire albums
-•	All albums (with their songs) are saved to alb.dat for persistent storage across sessions
+### 1. Song Library Management (Read-Only)
 
+- Loads songs from a binary file: `Lib.dat`
+- Displays all songs in a formatted text file: `Lib.txt`
+- Each song has a unique song ID generated internally and is **not shown to the user**.
 
-3. Playlist(/ Queue) Creation and Playback
-•	Add songs to playlist
-•	Add entire albums to playlist
-•	Delete songs from playlist
-•	Playlist supports:
-o	Next song
-o	Previous song
-o	Current song
-o	Looping playback
+### 2. Album Creation and Management
 
+- Create new albums using a name.
+- Add songs to albums using the song index from the Library.
+- Delete songs from albums using the song index inside the album.
+- Delete entire albums.
+- All albums, along with their songs, are saved to `alb.dat` for persistent storage across sessions.
 
-4. Command Logging (Across Sessions)
-•	Every user action is logged permanently 
+### 3. Playlist / Queue Creation and Playback
 
+- Add individual songs to the playlist.
+- Add entire albums to the playlist.
+- Delete songs from the playlist.
+- Playlist supports:
+  - **Next Song**
+  - **Previous Song**
+  - **Current Song**
+  - **Looping Playback**
 
-5. CLI Menu
-•	A full, numbered menu lets users perform all operations with simple inputs.
+### 4. Command Logging (Across Sessions)
 
+- Every user action is logged permanently.
+- The log is maintained across multiple program sessions.
 
+### 5. CLI Menu
 
-IMPORTANT CAUTION — About Library Creation Function
- The Library Creator Function (createLib.c) is ONE-TIME USE ONLY
-You wrote a function to generate Lib.dat and Lib.txt initially.
-This was required only to demonstrate implementation.
-❗ Users MUST NOT use this function again.
-Running it again will:
-•	Overwrite Lib.dat
-•	Break song IDs
-•	Corrupt the library linked list
-•	Corrupt albums and playlists
-•	Make your entire program inconsistent
- If the user wants to modify the library later:
-They must manually update:
-1.	Lib.txt (human-readable listing)
-2.	Lib.dat (binary file from which the program loads songs)
-The library is NOT supposed to be edited through the app.
-How to Run the Program
-Open terminal inside your project’s root folder and compile:
+- A full, numbered menu allows users to perform all operations using simple inputs.
+
+---
+
+## ⚠️ IMPORTANT CAUTION — Library Creation Function
+
+### `createLib.c` is ONE-TIME USE ONLY
+
+The Library Creator function was written to generate `Lib.dat` and `Lib.txt` initially. It is required **only for the initial creation of the library**.
+
+> **❗ Users MUST NOT run `createLib.c` again after the library has been created.**
+
+Running it again may:
+
+- Overwrite `Lib.dat`
+- Break song IDs
+- Corrupt the library linked list
+- Corrupt albums and playlists
+- Make the entire program inconsistent
+
+### Modifying the Library
+
+The library is **not designed to be edited through the application**.
+
+If the library needs to be modified later, the following files must be manually updated:
+
+1. `Lib.txt` — Human-readable song listing
+2. `Lib.dat` — Binary file from which the program loads songs
+
+**Do not use the application to modify the Library.**
+
+---
+
+# How to Run the Program
+
+Open a terminal inside the project's root folder and compile the program using:
+
+```bash
 gcc Source/main.c Source/lib_fxn.c Source/alb_fxn.c Source/playlist_fxn.c -o cUnplugged
